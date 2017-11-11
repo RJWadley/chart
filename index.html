@@ -1,0 +1,94 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Title Goes here</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+
+</head>
+
+<body class="container-fluid">
+
+  <!--Splash Screen-->
+  <div id=loadtime></div>
+
+  <div id="welcome">
+    <div class="welcome-circle">
+      <div class="welcome-content">
+        <h1>Hey There!</h1>
+        <p>Ready to get set up?</p>
+        <p id="reload">Please reload the page.</p>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!--Settings Screen-->
+  <div id="settings" class="opensettings">
+
+    <h1 class="text-center jumbotron">Settings</h1>
+    <div class="settings-content container">
+
+
+      <div class="settings-section">
+        <h2 class=text-center>People</h2>
+        <div id="person-list">
+        </div>
+        <div class="text-center">
+          <button class="btn btn-responsive btn-primary col-sm-3" onclick="addPerson();">Add Person</button>
+          <button class="btn btn-responsive btn-danger col-sm-3" onclick="removePerson();">Remove Person</button>
+        </div>
+      </div>
+
+      <div class="settings-section">
+        <h2 class=text-center>Daily Jobs</h2>
+        <div id="daily-list"></div>
+        <div class="text-center">
+          <button class="btn btn-responsive btn-primary col-sm-3" onclick="addDaily();">Add Job</button>
+          <button class="btn btn-responsive btn-danger col-sm-3" onclick="removeDaily();">Remove Job</button>
+        </div>
+      </div>
+
+      <div class="settings-section">
+        <h2 class=text-center>Weekly Jobs</h2>
+        <div id="weekly-list"></div>
+        <div class="text-center">
+          <button class="btn btn-responsive btn-primary col-sm-3" onclick="addWeekly();">Add Job</button>
+          <button class="btn btn-responsive btn-danger col-sm-3" onclick="removeWeekly();">Remove Job</button>
+        </div>
+      </div>
+
+      <div class="settings-section">
+        <h2 class=text-center>Static Jobs</h2>
+        <div id="static-list"></div>
+        <div class="text-center">
+          <button class="btn btn-responsive btn-primary col-sm-3" onclick="addStatic();">Add Job</button>
+          <button class="btn btn-responsive btn-danger col-sm-3" onclick="removeStatic();">Remove Job</button>
+        </div>
+      </div>
+
+      <button class="btn btn-info" onclick="saveSettings();">Save Settings</button>
+
+    </div>
+  </div>
+
+  <button class="btn btn-danger" onclick="localStorage.clear();">Reset</button>
+  <button class="btn btn-success" onclick="settings();">Open Settings</button>
+</body>
+
+</html>
