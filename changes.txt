@@ -1,0 +1,59 @@
+  Nov 11 2017
+This morning I built the HTML and attempted to create the JS- I've uploaded it
+to Github, but I decided it needed to be redone. So I redid it with chartData as
+one object, instead of four strings. This should also help with task management.
+I've also been completely rewriting the script and eliminating old code.
+Later-
+I worked on some of the things dealing with the people list- all three of the
+buttons now work and it should save to chartData, but not localStorage: that
+would happen in the Update and Close step.
+
+  Nov 12 2017
+I changed job to task in everything.
+People isn't saving, but I remember working on that. EDIT: this is intentional,
+it should not update yet.
+I've been working on the people dropdown.
+I've started a color palette.
+
+  Nov 18 2017
+I've started moving from onclick to getelementbyid event
+I've been cleaning up my code
+I need to fix some css, eg textboxes.
+Converting to Material Design...?
+  I need to update the script to match my amazing styling.
+ 
+  Nov 20 2017
+I was in the middle of setting up templates for selecting names.
+
+the update button should save the names and things.
+
+To-Do
+  When put on github the page needs a /fonts directory.
+  tasks:
+    Create better styling for editable text
+    Create popout editor for task repetition
+    Create dropdown that accesses people names
+    Save tasks to chartData
+  Update and Close step: save to localStorage
+    should not need createChartData- it will already be done.
+  Chart Builder
+    still figuring this one out...
+
+
+
+COLOR PALETTE- https://material.io/color/#!/?view.left=1&view.right=0&primary.color=00B0FF&secondary.color=FFA726
+
+GREYS
+Light Gray    #F5E7DB
+Dark Gray     #E1D6C8
+
+Blue Main     #00b0ff
+Light         #69e2ff
+Dark          #0081cb
+
+Orange Accent #ffa726
+Light         #ffd95b
+Dark          #c77800
+
+
+last edited nov 15 9:20pm 2017

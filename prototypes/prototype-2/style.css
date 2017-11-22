@@ -1,0 +1,169 @@
+/*Declare variables*/
+
+:root {
+  --primarycolor: #00b0ff;
+  --primarylight: #69e2ff;
+  --primarydark: #0081cb;
+  --secondarycolor: #ffa726;
+  --secondarylight: #ffd95b;
+  --secondarydark: #c77800;
+  --lightergray: #F5F5F6;
+  --darkergray: #E1E2E1;
+}
+
+html, body {
+  height: 100%;
+  background-color: var(--lightergray);
+}
+
+.chart {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+/*splash screen below*/
+
+#loadtime {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1001;
+  background-color: white;
+}
+
+#welcome {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: var(--primarycolor);
+}
+
+.welcome-circle {
+  background-color: white;
+  border-radius: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+}
+
+.welcome-content {
+  text-align: center;
+  display: block;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*On button press...*/
+
+.ready {
+  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 1, 1);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 1, 1);
+  -webkit-transform: translateY(-100%);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateY(-100%);
+  /* IE 9 */
+  transform: translateY(-100%);
+  /* Firefox 16+, IE 10+, Opera */
+}
+
+/* end splash screen*/
+
+#settings {
+  position: fixed;
+  overflow-y: scroll;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 900;
+  background-color: white;
+  border-bottom: 1px solid var(--secondarylight)
+}
+
+.opensettings {
+  -webkit-transition: all 0.7s 0.3s ease-in-out;
+  transition: all 0.7s 0.3s ease-in-out;
+  -webkit-transform: translateY(100%);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateY(100%);
+  /* IE 9 */
+  transform: translateY(100%);
+  /* Firefox 16+, IE 10+, Opera */
+}
+
+.settings-section {}
+
+.settings-input-text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  font-size: 1.25em;
+  border: none;
+  border-bottom: 2px solid var(--darkergray);
+  outline: none;
+}
+
+.settings-input-text:focus {
+  border-bottom: 2px solid var(--secondarycolor);
+}
+
+#update {
+  margin: 15px;
+}
+
+.settings-task {
+  //border: 5px solid red;
+}
+
+.settings-header {
+  background-color: var(--primarycolor) !important;
+}
+
+.settings-people-content {
+  background-color: var(--darkergray);
+  position: relative;
+  top: 10px;
+  border-radius: 5px;
+  visibility: hidden;
+  transition: opacity 1s;
+  opacity: 0;
+  padding: 10px;
+}
+
+.settings-people {
+  transition: opacity 1s;
+  font-size: 1.25em;
+}
+
+.popup-show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.settings-people-content::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -7px;
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent transparent var(--darkergray) transparent;
+}
